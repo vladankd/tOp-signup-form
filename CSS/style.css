@@ -1,0 +1,75 @@
+/*=====================
+ FONTS IMPORT 
+ =====================*/
+
+@font-face {
+  font-family: norse;
+  src: url(../Assets/FONTS/Norse-Bold.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*=================
+ GLOBAL STYLES 
+ =================*/
+:root {
+  box-sizing: border-box;
+  /* Fonts */
+
+  --logo-font: norse;
+  --main-font: arial, helvetica, sans-serif;
+
+  /* Colors */
+
+  --account-btn-color: #596d48;
+
+  --inputs-border-color: #e5e7eb;
+  --inputs-error-color: #dc3030;
+
+  --main-bg-color: #ebf8ea;
+  --logo-font-color: #fff;
+  --main-font-color: #333;
+}
+
+/* Global box sizing fix */
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/* Clearfix */
+
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: " ";
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* Lobotomized Owl global margins */
+body * + * {
+  margin-top: 1.5em;
+}
+
+body {
+  font-size: 1.125em;
+  background-color: blanchedalmond;
+  font-family: var(--main-font);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-image: url(../Assets/IMG/halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+/*===============
+ Page styling
+================*/
