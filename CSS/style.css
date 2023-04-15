@@ -41,7 +41,7 @@
   --see-foam-color: #93e9be;
   --taupe-color: #483c32;
 
-  --box-shadow-color: #a2a9ae;
+  --box-shadow-color: rgba(162, 169, 174, 0.318);
 }
 
 /* Global box sizing fix */
@@ -155,6 +155,7 @@ footer {
 .form-section {
   margin-top: 0;
   padding-top: 0.5em;
+  box-shadow: 0 2px var(--box-shadow-color);
 }
 
 .form-section h3 {
@@ -164,7 +165,6 @@ footer {
 .form-section label {
   font-size: 0.7rem;
   text-transform: uppercase;
-  /* background-color: #93e9be; */
 }
 
 .form-row > * + * {
@@ -199,4 +199,38 @@ footer {
   outline: none;
   border: 2px solid var(--see-foam-color);
   box-shadow: 1px 1px var(--box-shadow-color);
+}
+
+.form-group input:invalid {
+  border: 2px solid var(--inputs-error-color);
+  box-shadow: 1px 1px var(--main-font-color);
+  margin-bottom: 0;
+}
+
+.validation-text {
+  color: var(--inputs-error-color);
+  font-size: 0.8rem;
+  margin-top: 0;
+}
+
+/* CTA section */
+
+.cta-section button {
+  background-color: var(--see-foam-color);
+  color: var(--taupe-color);
+  border: none;
+  border-radius: 0.2em;
+  font-size: 1.2rem;
+  padding: 0.5em 1.5em;
+  box-shadow: 1px 1px var(--box-shadow-color);
+  cursor: pointer;
+}
+
+.login-link {
+  text-decoration: none;
+  color: var(--see-foam-color);
+}
+
+.login-link:hover {
+  text-decoration: underline;
 }
