@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "goudy old style";
+  src: url(../Assets/FONTS/Goudy\ Old\ Style\ Regular.ttf);
+  font-weight: normal;
+  font-family: normal;
+}
+
 /*=================
  GLOBAL STYLES 
  =================*/
@@ -17,6 +24,7 @@
   /* Fonts */
 
   --logo-font: norse;
+  --alternate-logo-font: "goudy old style";
   --main-font: arial, helvetica, sans-serif;
 
   /* Colors */
@@ -26,9 +34,14 @@
   --inputs-border-color: #e5e7eb;
   --inputs-error-color: #dc3030;
 
-  --main-bg-color: #ebf8ea;
+  --main-bg-color: #ffffff;
   --logo-font-color: #fff;
   --main-font-color: #333;
+
+  --see-foam-color: #93e9be;
+  --taupe-color: #483c32;
+
+  --box-shadow-color: #a2a9ae;
 }
 
 /* Global box sizing fix */
@@ -58,18 +71,132 @@ body * + * {
 
 body {
   font-size: 1.125em;
-  background-color: blanchedalmond;
+  background-color: var(--taupe-color);
   font-family: var(--main-font);
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
-  background-image: url(../Assets/IMG/halie-west-25xggax4bSA-unsplash.jpg);
+  max-width: 1080px;
+  background-image: url(../Assets/IMG/book_shelf.jpeg);
   background-size: contain;
   background-repeat: no-repeat;
   min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 /*===============
  Page styling
 ================*/
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 5;
+}
+.column-right {
+  flex: 4;
+  background-color: var(--main-bg-color);
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.column-right > * {
+  padding: 1.5em;
+}
+
+/* logo section */
+.logo {
+  background-color: rgba(27, 33, 22, 0.5);
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+  padding: 1em;
+  margin-top: 5em;
+  justify-content: center;
+}
+
+.logo .logo-img {
+  max-height: 8em;
+  max-width: 7em;
+}
+
+.logo .logo-text {
+  color: var(--logo-font-color);
+  font-family: var(--alternate-logo-font);
+  font-weight: bold;
+  font-size: 5em;
+  margin: 0;
+  margin-left: 0.2em;
+}
+/* footer section */
+footer {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1.5em;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Right side */
+
+.hero-text {
+  padding-top: 5em;
+  background-color: var(--see-foam-color);
+  color: var(--taupe-color);
+  box-shadow: 0 2px var(--box-shadow-color);
+  font-weight: bold;
+}
+
+.form-section {
+  margin-top: 0;
+  padding-top: 0.5em;
+}
+
+.form-section h3 {
+  margin-top: 0.7em;
+}
+
+.form-section label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  /* background-color: #93e9be; */
+}
+
+.form-row > * + * {
+  margin-top: 0;
+}
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-group {
+  display: table;
+  margin-right: 1em;
+  width: 45%;
+}
+
+.form-group label {
+  display: table-caption;
+}
+
+.form-group input {
+  margin: 0.5em 0;
+  border-radius: 0.2em;
+  box-shadow: 0px 1px var(--box-shadow-color);
+  border: none;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.form-group input:focus {
+  outline: none;
+  border: 2px solid var(--see-foam-color);
+  box-shadow: 1px 1px var(--box-shadow-color);
+}

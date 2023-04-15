@@ -12,11 +12,25 @@
       <!-- Left column -->
       <div class="column-left">
         <div class="logo">
-          <h1><img src="./Assets/IMG/odin-lined.png" alt="ODIN img" /> Odin</h1>
+          <span class="logo-img"
+            ><img
+              src="./Assets/IMG/Book.svg"
+              alt="Open book logo image"
+              class="logo-img" /></span
+          ><span class="logo-text">The Books</span>
         </div>
         <footer>
-          Photo by <a href="#" class="footer-link">Halie West</a> on
-          <a href="#" class="footer-link">Unsplash</a>
+          Photo by
+          <a
+            href="https://unsplash.com/photos/25xggax4bSA"
+            target="_blank"
+            class="footer-link"
+            >Halie West</a
+          >
+          on
+          <a href="https://unsplash.com/" target="_blank" class="footer-link"
+            >Unsplash</a
+          >
         </footer>
       </div>
       <!-- Right column -->
@@ -24,36 +38,53 @@
         <div class="hero-text">
           <p>
             This is not a real online service! You know you need something like
-            this in your life tohelp you realize your deepest dreams <br />
+            this in your life to help you realize your deepest dreams <br />
             sign up now to get started
           </p>
           <p>You know you want to.</p>
         </div>
         <div class="form-section">
           <h3>Let's do this!</h3>
-          <form action="">
-            <p>
-              <label for="f-name">First Name</label>
-              <input type="text" name="f-name" id="f-name" />
-              <label for="l-name">Last Name</label>
-              <input type="text" name="l-name" id="l-name" />
-            </p>
-            <p>
-              <label for="email">eMail</label>
-              <input type="email" name="email" id="email" />
-              <label for="phone">Phone number</label>
-              <input type="tel" name="phone" id="phone" />
-            </p>
-            <p>
-              <label for="pwd">password</label>
-              <input type="password" name="pwd" id="pwd" />
-              <label for="pwd-confirm">Confirm password</label>
-              <input type="password" name="pwd-confirm" id="pwd-confirm" />
-            </p>
+          <form action="#" method="GET" id="Sign-up-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">First Name</label>
+                <input type="text" name="f-name" id="f-name" />
+              </div>
+              <div class="form-group">
+                <label for="l-name">Last Name</label>
+                <input type="text" name="l-name" id="l-name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">eMail</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" name="phone" id="phone" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pwd">password</label>
+                <input type="password" name="pwd" id="pwd" required />
+              </div>
+              <div class="form-group">
+                <label for="pwd-confirm">Confirm password</label>
+                <input
+                  type="password"
+                  name="pwd-confirm"
+                  id="pwd-confirm"
+                  required
+                />
+              </div>
+            </div>
           </form>
         </div>
         <div class="cta-section">
-          <button type="submit">Create Account</button>
+          <button type="submit" form="Sign-up-form">Create Account</button>
           <p>
             Already have an account? <a href="#" class="login-link">Log in</a>
           </p>
