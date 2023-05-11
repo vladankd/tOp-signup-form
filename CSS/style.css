@@ -29,7 +29,7 @@
 
   /* Colors */
 
-  --account-btn-color: #596d48;
+  --account-btn-color: #b56136;
 
   --inputs-border-color: #e5e7eb;
   --inputs-error-color: #dc3030;
@@ -100,6 +100,8 @@ body {
   background-color: var(--main-bg-color);
   margin-top: 0;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .column-right > * {
@@ -215,6 +217,13 @@ footer {
 
 /* CTA section */
 
+.cta-section {
+  /* background-color: var(--taupe-color); */
+  /* color: var(--logo-font-color); */
+  height: 100%;
+  margin-top: 0;
+}
+
 .cta-section button {
   background-color: var(--see-foam-color);
   color: var(--taupe-color);
@@ -228,7 +237,7 @@ footer {
 
 .login-link {
   text-decoration: none;
-  color: var(--see-foam-color);
+  color: var(--account-btn-color);
 }
 
 .login-link:hover {
